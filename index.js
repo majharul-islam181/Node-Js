@@ -26,14 +26,17 @@ console.log('file name: ',__filename);
 
 
  
-//creating server
+//##################creating server
 
+/*
 const http = require('http');
 // http.createServer().listen(4500); //create is a function who are basically function with parameter.
 
 
 http.createServer((req,res)=>{
     res.write('<h1>hello this is chamok<h1>');
+    res.write('<h1>this is subtext<h1>');
+    
     res.end();
 }).listen(4500);
  
@@ -42,7 +45,17 @@ function dataControl(req,res){
     res.write('This is 4000 server');
     res.end();
 };
-http.createServer(dataControl).listen(4000);
+http.createServer(dataControl).listen(4000); 
+
+*/
+
+
+// Package.json
+
+
+
+
+
 
 
 
