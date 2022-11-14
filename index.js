@@ -94,13 +94,14 @@ const fs = require('fs');
 const path = require('path');
 const dirPath = path.join(__dirname,'files');
 
-//file write
+//Write File 
 /*
 for(i=0;i<5;i++){
     fs.writeFileSync(dirPath+'/hello'+i+'.txt','a sample text file');
 }
 */
 
+// Read File
 //directory read => then file read
 /*
 fs.readdir(dirPath,(err,files)=>{
