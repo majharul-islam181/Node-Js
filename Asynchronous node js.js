@@ -26,16 +26,34 @@ Start exe.....2(after 2000 it will exicute)
 
 /*drawback 
 
-let a=10;
-let b=0;
+        let a=10;
+        let b=0;
 
-setTimeout(() => {
-    b=20;
-}, 2000);
-console.log(a+b);
-
+        setTimeout(() => { 
+            b=20;
+        }, 2000);
+        console.log(a+b);
 */
 
 /*
-10
+            10
 */
+
+
+// /how to solve this problem
+// 
+// solve this problem with Promise
+
+let a=10;
+let b=10;
+
+let waitingData = new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        resolve(20);
+    }, 2000);
+
+});
+
+waitingData.then((data)=>{
+    console.log(a+data);
+});
