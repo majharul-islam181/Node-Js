@@ -1,5 +1,5 @@
 const app = require("./app");
-const fs = require("fs"); //non global module
+// const fs = require("fs"); //non global module
 
 // const chamokisfilesytem = require('fs'); // variable(chamokisfilesystem) can be anything
 
@@ -69,8 +69,11 @@ http.createServer(dataControl).listen(4000);
 //nodemon package
 console.log("nodemon");
 console.log("nodemon install");
+
 //make a simple api
 
+
+/*
 const http = require("http");
 const data = require("./data");
 
@@ -79,3 +82,36 @@ http.createServer((req, res) => {
     res.write(JSON.stringify(data));
     res.end();
   }).listen(600);
+
+
+*/
+
+
+//########  Show File List From File System
+
+
+const fs = require('fs');
+const path = require('path');
+const dirPath = path.join(__dirname,'files');
+
+//file write
+/*
+for(i=0;i<5;i++){
+    fs.writeFileSync(dirPath+'/hello'+i+'.txt','a sample text file');
+}
+*/
+
+//directory read => then file read
+/*
+fs.readdir(dirPath,(err,files)=>{
+    // console.log(files); //it gives us in a Array format
+    files.forEach((items)=>{
+        console.log(items);
+    });
+});
+*/
+
+
+
+ 
+
