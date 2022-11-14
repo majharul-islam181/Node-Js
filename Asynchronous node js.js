@@ -3,6 +3,7 @@
 // console.log('Start exe.....2');
 
 // console.log('Start exe........3');
+
 /*
 Start exe...1
 Start exe.....2
@@ -11,7 +12,6 @@ Start exe........3
 
 
 console.log('Start exe...1');
-
 setTimeout(() => {
     console.log('Start exe.....2');
 }, 2000);
