@@ -16,17 +16,15 @@ app.get('/profile',(req,res)=>{
     res.render('profile',{user});
 });
 
+    app.get('/login',(req,res)=>{
+        res.render('login');
+    });
 
-// app.get('*',(req,res)=>{
-//     res.sendFile(`${pathTEejsA}/errorpage.html`);
-// });
 
-// app.get('/profile',(req,res)=>{
-//     res.sendFile(`${pathTEejs}/profile.html`);
-// });
+    app.get('*',(req,res)=>{
+        res.sendFile(`${pathTEejsA}/errorpage.html`);
+    });
 
-// app.get('/about',(req,res)=>{
-//     res.sendFile(`${pathTEejs}/about.html`);
-// });
 
 app.listen(2000);
+
