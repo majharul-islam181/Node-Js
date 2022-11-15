@@ -1,3 +1,7 @@
+// application lvl middleware 
+// means sob routes ei same restrictions thakbe.
+// here our routes num are 2
+
 const express = require("express");
 const app = express();
 
