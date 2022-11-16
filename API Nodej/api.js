@@ -2,6 +2,7 @@ const express = require("express");
 const dbconnect = require("../Mongodb perpus/mongodb");
 const app = express();
 app.use(express.json());
+const mongodb = require('mongodb');//for delete purpos
 
 app.get("/", async (req, res) => {
   let data = await dbconnect();
@@ -46,6 +47,13 @@ app.put('/',async (req, res)=>{
 })
 
 
+app.delete('/:id',async (req, res)=>{
+    console.log(req.params.id);
+    const data =await dbconnect()
+    const result =await data.deleteOne({_id: new mongodb.ObjectId(req.params.id)});
+    console.log(result);
+    res.send(result);
+});
 
 
 app.listen(500);
