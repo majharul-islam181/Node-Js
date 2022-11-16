@@ -11,5 +11,12 @@ app.get("/", async (req, res) => {
   res.send(data);
 });
 
+app.post('/',async (req,res)=>{
+    let data = await dbconnect();
+    let result = await data.insertOne(req.body);
+    console.log(req.body);
+    res.send(result);
+});
+
 
 app.listen(500);
