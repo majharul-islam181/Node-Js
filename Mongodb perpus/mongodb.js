@@ -7,7 +7,7 @@ const dbName = 'teapack';
 async function dbconnect() {
     // Use connect method to connect to the server
     let result = await client.connect();
-    console.log('Connected successfully to server');
+    // console.log('Connected successfully to server');
     const db = result.db(dbName);
     return db.collection('bazar');  
   
