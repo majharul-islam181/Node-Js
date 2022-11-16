@@ -24,7 +24,7 @@ async function dbconnect() {
 }
 //promises handle korar jonoo then function use korte hobe
 dbconnect().then((response)=>{
-  response.find({name: 'majharul islam'}).toArray().then((data)=>{ //collection er jonno another promise use kora hyse
+  response.find({name: 'majharul islam'c}).toArray().then((data)=>{ //collection er jonno another promise use kora hyse
     console.log(data);
   });
 });
