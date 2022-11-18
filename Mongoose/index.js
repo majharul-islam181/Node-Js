@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/teapack");
 
 const main = async () => {
-  // data restriction => schema
-  // database er nodejs connection => Model
   const ProductSchema = new mongoose.Schema({
     name: String,
   });
