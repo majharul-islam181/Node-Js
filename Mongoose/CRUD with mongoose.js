@@ -33,7 +33,6 @@ const deleteInDB = async ()=>{
   let data = await ProductModel.deleteOne({name:'Iphone 16'})
   console.log(data);
 }
-
 // deleteInDB();
 
 const findInDB = async ()=>{
