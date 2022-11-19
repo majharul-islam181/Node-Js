@@ -1,8 +1,6 @@
-
 const express = require('express');
 require('./config');
 const Product = require('./product');
-
 const app = express();
 app.use(express.json());
 
@@ -22,19 +20,38 @@ app.get('/list',async(req,res)=>{
     res.send(data);
 })
 
-//delete with id
+//delete with id  // 637915f5b18d42091f9ab1dc
 app.delete('/delete/:_id',async (req,res)=>{
     console.log(req.params);
     let data =await Product.deleteOne(req.params);
     res.send(data);
 });
 
+//delete with name
 // app.delete('/delete',async (req,res)=>{
-//     let data =await Product.deleteOne({name: 'm 40'});
+//     let data =await Product.deleteOne({name: 'Iphone XR'});
 //     res.send(data);
 // });
 
+app.delete('/delete/:_id',async (req,res)=>{
+    console.log(req.params);
+    let data =await Product.deleteOne(req.params);
+    res.send(data);
+});
+
+app.put('/update',async(req,res)=>{
+
+    let data = await Product.updateMany({name: 'Iphone'},
+        {
+            $set: {price: 20}
+        }
+        );
+
+    res.send('update successfull')
+
+});
+
 app.listen(5000);
 
-// 637915f5b18d42091f9ab1dc
+
 
